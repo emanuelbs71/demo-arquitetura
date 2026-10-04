@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Atelier | Design de Interiores</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fontes Elegantes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1A1A1A',
+                        secondary: '#525252',
+                        accent: '#B09B7A', /* Dourado/Areia elegante */
+                        bgLight: '#FAFAFA'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #FAFAFA; color: #1A1A1A; }
+        .project-card:hover .project-img { transform: scale(1.05); }
+        .project-img { transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-accent selection:text-white">
+
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 bg-bgLight/90 backdrop-blur-md border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="font-serif text-2xl tracking-widest uppercase">Studio<span class="text-accent italic">Atelier</span></a>
+            
+            <nav class="hidden md:flex gap-8 text-sm tracking-widest uppercase text-secondary">
+                <a href="#sobre" class="hover:text-accent transition-colors">O Estúdio</a>
+                <a href="#projetos" class="hover:text-accent transition-colors">Projetos</a>
+                <a href="#servicos" class="hover:text-accent transition-colors">Consultoria</a>
+            </nav>
+
+            <a href="#contato" class="hidden md:block px-6 py-2 border border-primary text-primary uppercase tracking-widest text-xs hover:bg-primary hover:text-white transition-colors duration-300">Agendar Projeto</a>
+        </div>
+    </header>
+
+    <!-- Hero Section (Dobra principal com a foto mais limpa) -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Imagem de fundo (Paisagem escolhida) -->
+        <div class="absolute inset-0 z-0">
+            <img src="img/spacejoy-9M66C_w_ToM-unsplash.jpg" alt="Interior moderno e iluminado" class="w-full h-full object-cover">
+            <!-- Película escurecida para dar contraste -->
+            <div class="absolute inset-0 bg-black/60"></div>
+        </div>
+        
+        <div class="relative z-10 text-center text-white px-4 max-w-4xl mt-16">
+            <h1 class="font-serif text-5xl md:text-7xl font-normal leading-tight mb-6 drop-shadow-2xl">
+                Design de interiores que reflete a sua essência.
+            </h1>
+            <p class="text-lg md:text-xl font-light mb-10 max-w-2xl mx-auto drop-shadow-lg text-gray-200">
+                Criamos ambientes exclusivos que abraçam o seu estilo de vida, unindo conforto absoluto, curadoria de móveis e iluminação perfeita.
+            </p>
+            <a href="#projetos" class="inline-block px-8 py-4 bg-white text-primary uppercase tracking-widest text-sm hover:bg-accent hover:text-white transition-colors duration-300">
+                Ver Portfólio
+            </a>
+        </div>
+    </section>
+
+    <!-- Sobre / Manifesto focado em Interiores -->
+    <section id="sobre" class="py-24 md:py-32 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <span class="text-accent uppercase tracking-[0.3em] text-sm font-medium">Nossa Filosofia</span>
+            <h2 class="font-serif text-3xl md:text-4xl mt-6 mb-8 text-primary leading-relaxed">
+                "Não preenchemos espaços apenas com móveis. Nós curamos atmosferas, texturas e luz para dar forma à maneira como você vive."
+            </h2>
+            <p class="text-secondary leading-relaxed max-w-2xl mx-auto">
+                No Studio Atelier, cada ambiente conta uma história. Nosso foco exclusivo em design de interiores nos permite aprofundar na ergonomia, na escolha criteriosa de materiais e no aproveitamento inteligente dos espaços. Entregamos lares e espaços comerciais que inspiram tranquilidade, elegância e funcionalidade diária.
+            </p>
+        </div>
+    </section>
+
+    <!-- Grade de Projetos Estilo Mosaico / Pinterest -->
+    <section id="projetos" class="py-12 px-4 md:px-8 max-w-[1400px] mx-auto">
+        <div class="flex justify-between items-end mb-12">
+            <div>
+                <h2 class="font-serif text-4xl text-primary">Projetos em Destaque</h2>
+            </div>
+        </div>
+
+        <!-- CSS Grid Mosaico (3 Colunas) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 auto-rows-[300px] gap-4">
+            
+            <!-- Projeto 1 (Retrato - Ocupa 2 linhas) -->
+            <div class="project-card relative overflow-hidden group cursor-pointer md:col-span-1 md:row-span-2">
+                <img src="img/bailey-alexander-QQ6xmTXXFZ8-unsplash.jpg" alt="Sala de estar clara com lareira" class="project-img w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                    <span class="text-accent text-xs tracking-widest uppercase mb-2">Residencial</span>
+                    <h3 class="text-white font-serif text-xl">Living Escandinavo</h3>
+                </div>
+            </div>
+
+            <!-- Projeto 2 (Paisagem - Ocupa 2 colunas) -->
+            <div class="project-card relative overflow-hidden group cursor-pointer md:col-span-2 md:row-span-1">
+                <img src="img/d5-render--_eNaluvWv0-unsplash.jpg" alt="Sala aconchegante com tons terrosos" class="project-img w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                    <span class="text-accent text-xs tracking-widest uppercase mb-2">Interiores</span>
+                    <h3 class="text-white font-serif text-xl">Lounge Terra & Luz</h3>
+                </div>
+            </div>
+
+            <!-- Projeto 3 (Paisagem - Ocupa 2 colunas) -->
+            <div class="project-card relative overflow-hidden group cursor-pointer md:col-span-2 md:row-span-1">
+                <img src="img/huy-nguyen-fQgYAnWVFeo-unsplash.jpg" alt="Living luxuoso de pé direito duplo" class="project-img w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                    <span class="text-accent text-xs tracking-widest uppercase mb-2">Alto Padrão</span>
+                    <h3 class="text-white font-serif text-xl">Duplex Elegance</h3>
+                </div>
+            </div>
+
+            <!-- Projeto 4 (Paisagem - Ocupa 2 colunas) -->
+            <div class="project-card relative overflow-hidden group cursor-pointer md:col-span-2 md:row-span-1">
+                <img src="img/istockphoto-1990444472-1024x1024.jpg" alt="Sala de estar moderna e clean" class="project-img w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                    <span class="text-accent text-xs tracking-widest uppercase mb-2">Apartamento</span>
+                    <h3 class="text-white font-serif text-xl">Refúgio Urbano Minimalista</h3>
+                </div>
+            </div>
+
+            <!-- Projeto 5 (Retrato - Ocupa 2 linhas) -->
+            <div class="project-card relative overflow-hidden group cursor-pointer md:col-span-1 md:row-span-2">
+                <img src="img/spacejoy-OlFHzNjg9kY-unsplash.webp" alt="Canto de leitura charmoso" class="project-img w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                    <span class="text-accent text-xs tracking-widest uppercase mb-2">Detalhes</span>
+                    <h3 class="text-white font-serif text-xl">Canto de Leitura Botanic</h3>
+                </div>
+            </div>
+
+            <!-- Projeto 6 (Paisagem - Ocupa 2 colunas) -->
+            <div class="project-card relative overflow-hidden group cursor-pointer md:col-span-2 md:row-span-1">
+                <img src="img/kara-eads-L7EwHkq1B2s-unsplash.jpg" alt="Sala integrada com cozinha" class="project-img w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                    <span class="text-accent text-xs tracking-widest uppercase mb-2">Reforma</span>
+                    <h3 class="text-white font-serif text-xl">Integração Funcional</h3>
+                </div>
+            </div>
+
+            <!-- Projeto 7 (Paisagem - Ocupa 1 coluna) -->
+            <div class="project-card relative overflow-hidden group cursor-pointer md:col-span-1 md:row-span-1">
+                <img src="img/spacejoy-PyeXkOVmG1Y-unsplash.jpg" alt=Sala de TV com painel escuro" class="project-img w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                    <span class="text-accent text-xs tracking-widest uppercase mb-2">Composição</span>
+                    <h3 class="text-white font-serif text-xl">Home Theater Noir</h3>
+                </div>
+            </div>
+
+            <!-- Projeto 8 (Paisagem - Ocupa 2 colunas) -->
+            <div class="project-card relative overflow-hidden group cursor-pointer md:col-span-2 md:row-span-1">
+                <img src="img/lotus-design-n-print-wRzBarqn3hs-unsplash.jpg" alt="Sala de jantar elegante" class="project-img w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                    <span class="text-accent text-xs tracking-widest uppercase mb-2">Mobiliário</span>
+                    <h3 class="text-white font-serif text-xl">Sala de Jantar Clássica</h3>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="py-24 bg-primary text-white mt-12">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h2 class="font-serif text-4xl mb-6">Transforme o seu ambiente</h2>
+            <p class="text-gray-400 mb-10 max-w-xl mx-auto">
+                Oferecemos consultoria presencial e online, além de projetos completos de interiores. Entre em contato para darmos vida às suas ideias.
+            </p>
+            <a href="https://wa.me/5553984263004?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20projeto%20de%20interiores" target="_blank" class="inline-block px-10 py-4 bg-accent text-white uppercase tracking-widest text-sm hover:bg-white hover:text-primary transition-colors duration-300">
+                Falar com a Designer
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-gray-200 text-center text-sm text-secondary">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+            <p>&copy; 2026 Studio Atelier. Todos os direitos reservados.</p>
+            <div class="mt-4 md:mt-0 space-x-6">
+                <a href="#" class="hover:text-accent transition-colors">Instagram</a>
+                <a href="#" class="hover:text-accent transition-colors">Pinterest</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
