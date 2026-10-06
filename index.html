@@ -37,7 +37,7 @@
 </head>
 <body class="font-sans antialiased selection:bg-accent selection:text-white">
 
-    <!-- Header -->
+    <!-- Header com Menu Hambúrguer -->
     <header class="fixed w-full top-0 z-50 bg-bgLight/90 backdrop-blur-md border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <a href="#" class="font-serif text-2xl tracking-widest uppercase">Studio<span class="text-accent italic">Atelier</span></a>
@@ -49,15 +49,27 @@
             </nav>
 
             <a href="#contato" class="hidden md:block px-6 py-2 border border-primary text-primary uppercase tracking-widest text-xs hover:bg-primary hover:text-white transition-colors duration-300">Agendar Projeto</a>
+
+            <!-- Botão Hambúrguer Mobile -->
+            <button id="menuBtnArq" class="md:hidden p-2 text-primary" aria-label="Abrir menu">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+            </button>
+        </div>
+
+        <!-- Menu Mobile Dropdown -->
+        <div id="mobileMenuArq" class="hidden md:hidden border-t border-gray-200 bg-bgLight absolute w-full left-0 shadow-lg top-20">
+            <ul class="px-6 py-4 flex flex-col gap-4 text-secondary uppercase tracking-widest text-sm text-center">
+                <li><a href="#sobre" class="mobile-link block py-3 border-b border-gray-100">O Estúdio</a></li>
+                <li><a href="#projetos" class="mobile-link block py-3 border-b border-gray-100">Projetos</a></li>
+                <li><a href="#contato" class="mobile-link block py-3">Contato</a></li>
+            </ul>
         </div>
     </header>
 
-    <!-- Hero Section (Dobra principal com a foto mais limpa) -->
+    <!-- Hero Section -->
     <section class="relative h-screen flex items-center justify-center overflow-hidden">
-        <!-- Imagem de fundo (Paisagem escolhida) -->
         <div class="absolute inset-0 z-0">
             <img src="img/spacejoy-9M66C_w_ToM-unsplash.jpg" alt="Interior moderno e iluminado" class="w-full h-full object-cover">
-            <!-- Película escurecida para dar contraste -->
             <div class="absolute inset-0 bg-black/60"></div>
         </div>
         
@@ -74,7 +86,7 @@
         </div>
     </section>
 
-    <!-- Sobre / Manifesto focado em Interiores -->
+    <!-- Sobre -->
     <section id="sobre" class="py-24 md:py-32 px-6">
         <div class="max-w-4xl mx-auto text-center">
             <span class="text-accent uppercase tracking-[0.3em] text-sm font-medium">Nossa Filosofia</span>
@@ -95,10 +107,9 @@
             </div>
         </div>
 
-        <!-- CSS Grid Mosaico (3 Colunas) -->
-        <div class="grid grid-cols-1 md:grid-cols-3 auto-rows-[300px] gap-4">
+        <!-- CSS Grid Mosaico (Responsividade Ajustada) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 auto-rows-[250px] md:auto-rows-[300px] gap-4">
             
-            <!-- Projeto 1 (Retrato - Ocupa 2 linhas) -->
             <div class="project-card relative overflow-hidden group cursor-pointer md:col-span-1 md:row-span-2">
                 <img src="img/bailey-alexander-QQ6xmTXXFZ8-unsplash.jpg" alt="Sala de estar clara com lareira" class="project-img w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
@@ -107,7 +118,6 @@
                 </div>
             </div>
 
-            <!-- Projeto 2 (Paisagem - Ocupa 2 colunas) -->
             <div class="project-card relative overflow-hidden group cursor-pointer md:col-span-2 md:row-span-1">
                 <img src="img/d5-render--_eNaluvWv0-unsplash.jpg" alt="Sala aconchegante com tons terrosos" class="project-img w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
@@ -116,7 +126,6 @@
                 </div>
             </div>
 
-            <!-- Projeto 3 (Paisagem - Ocupa 2 colunas) -->
             <div class="project-card relative overflow-hidden group cursor-pointer md:col-span-2 md:row-span-1">
                 <img src="img/huy-nguyen-fQgYAnWVFeo-unsplash.jpg" alt="Living luxuoso de pé direito duplo" class="project-img w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
@@ -125,7 +134,6 @@
                 </div>
             </div>
 
-            <!-- Projeto 4 (Paisagem - Ocupa 2 colunas) -->
             <div class="project-card relative overflow-hidden group cursor-pointer md:col-span-2 md:row-span-1">
                 <img src="img/istockphoto-1990444472-1024x1024.jpg" alt="Sala de estar moderna e clean" class="project-img w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
@@ -134,7 +142,6 @@
                 </div>
             </div>
 
-            <!-- Projeto 5 (Retrato - Ocupa 2 linhas) -->
             <div class="project-card relative overflow-hidden group cursor-pointer md:col-span-1 md:row-span-2">
                 <img src="img/spacejoy-OlFHzNjg9kY-unsplash.webp" alt="Canto de leitura charmoso" class="project-img w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
@@ -143,7 +150,6 @@
                 </div>
             </div>
 
-            <!-- Projeto 6 (Paisagem - Ocupa 2 colunas) -->
             <div class="project-card relative overflow-hidden group cursor-pointer md:col-span-2 md:row-span-1">
                 <img src="img/kara-eads-L7EwHkq1B2s-unsplash.jpg" alt="Sala integrada com cozinha" class="project-img w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
@@ -152,16 +158,14 @@
                 </div>
             </div>
 
-            <!-- Projeto 7 (Paisagem - Ocupa 1 coluna) -->
             <div class="project-card relative overflow-hidden group cursor-pointer md:col-span-1 md:row-span-1">
-                <img src="img/spacejoy-PyeXkOVmG1Y-unsplash.jpg" alt=Sala de TV com painel escuro" class="project-img w-full h-full object-cover">
+                <img src="img/spacejoy-PyeXkOVmG1Y-unsplash.jpg" alt="Sala de TV com painel escuro" class="project-img w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
                     <span class="text-accent text-xs tracking-widest uppercase mb-2">Composição</span>
                     <h3 class="text-white font-serif text-xl">Home Theater Noir</h3>
                 </div>
             </div>
 
-            <!-- Projeto 8 (Paisagem - Ocupa 2 colunas) -->
             <div class="project-card relative overflow-hidden group cursor-pointer md:col-span-2 md:row-span-1">
                 <img src="img/lotus-design-n-print-wRzBarqn3hs-unsplash.jpg" alt="Sala de jantar elegante" class="project-img w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
@@ -197,5 +201,12 @@
         </div>
     </footer>
 
+    <!-- Script do Menu Hambúrguer (Adicionado aqui) -->
+    <script>
+        const btnArq = document.getElementById('menuBtnArq');
+        const menuArq = document.getElementById('mobileMenuArq');
+        btnArq.addEventListener('click', () => menuArq.classList.toggle('hidden'));
+        document.querySelectorAll('.mobile-link').forEach(link => link.addEventListener('click', () => menuArq.classList.add('hidden')));
+    </script>
 </body>
 </html>
